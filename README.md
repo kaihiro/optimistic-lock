@@ -1,4 +1,4 @@
-# OptimisticLock plugin for CakePHP
+# OptimisticLock plugin for CakePHP3
 
 ## Installation
 
