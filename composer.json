@@ -1,0 +1,17 @@
+{
+    "name": "kaihiro/optimist",
+    "description": "Optimistic Lock plugin for CakePHP3",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "OptimisticLock\\": "src"
+        }
+    },
+}
