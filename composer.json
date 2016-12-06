@@ -1,5 +1,5 @@
 {
-    "name": "kaihiro/optimist",
+    "name": "kaihiro/optimistic-lock",
     "description": "Optimistic Lock plugin for CakePHP3",
     "type": "cakephp-plugin",
     "require": {
