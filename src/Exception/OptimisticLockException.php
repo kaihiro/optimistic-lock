@@ -1,6 +1,6 @@
 <?php
 
-namespace OptimisticLock\Model\Behavior\Exception;
+namespace OptimisticLock\Exception;
 
 use Cake\Core\Exception\Exception;
 
