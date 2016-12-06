@@ -7,7 +7,7 @@ You can install this plugin into your CakePHP application using [composer](http:
 The recommended way to install composer packages is:
 
 ```
-composer require kaihiro/optimist
+composer require kaihiro/optimistic-lock
 ```
 
 ## Usage
@@ -37,8 +37,6 @@ class AppFormHelper extends FormHelper
 ```
 
 ### Controller
-
-
 
 ```
 <?php
