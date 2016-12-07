@@ -5,7 +5,7 @@ namespace OptimisticLock\Model\Behavior;
 use Cake\Datasource\EntityInterface;
 use Cake\Event\Event;
 use Cake\ORM\Behavior;
-use OptimisticLock\Model\Behavior\Exception\OptimisticLockException;
+use OptimisticLock\Exception\OptimisticLockException;
 
 /**
  * 楽観ロックを行うためのビヘイビアです.
