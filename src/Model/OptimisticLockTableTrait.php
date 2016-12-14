@@ -53,7 +53,7 @@ trait OptimisticLockTableTrait
             throw new InvalidArgumentException($message);
         }
 
-        // update version
+        // for optimistic lock
         $conditions = $primaryKey;
         if ($this->hasField('version')) {
             if ($entity->has('version')) {
@@ -78,6 +78,7 @@ trait OptimisticLockTableTrait
 
         $success = false;
         if ($statement->errorCode() === '00000') {
+            // for optimistic lock
             if ($statement->count() === 0) {
                 throw new OptimisticLockException();
             }
