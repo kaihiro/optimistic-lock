@@ -16,10 +16,15 @@ composer require kaihiro/optimistic-lock
 
 ```
 <?php
+use OptimisticLock\Model\OptimisticLockTableTrait;
 class PostsTable extends Table
 {
+    // Add the trait to your table
+    use OptimisticLockTableTrait;
+
     public function initialize(array $config)
     {
+        // Add the behaviour to your table
         $this->addBehavior('OptimisticLock.OptimisticLock');
 	}
 }
@@ -32,6 +37,7 @@ class PostsTable extends Table
 use OptimisticLock\View\Helper\OptimisticLockFormTrait;
 class AppFormHelper extends FormHelper
 {
+    // Add the trait to your FormHelper
     use OptimisticLockFormTrait;
 }
 ```
@@ -57,6 +63,8 @@ class PostsController extends AppController
                 } else {
                     $this->Flash->error(__('The post could not be saved. Please, try again.'));
                 }
+
+            // You can handle optimistic lock by catching OptimisticLockException.
             } catch (OptimisticLockException $e) {
                 $this->Flash->error(__('optimistic lock error.'));
             }
