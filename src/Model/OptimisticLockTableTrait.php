@@ -2,6 +2,7 @@
 
 namespace OptimisticLock\Model;
 
+use InvalidArgumentException;
 use OptimisticLock\Exception\OptimisticLockException;
 
 /**
